@@ -49,7 +49,7 @@ def envia_relatorio_por_email():
 
     db.close()
 
-# Schedule para automatiza o envio de emails em determinado horário do dia
+# Schedule para automatizar o envio de emails em determinado horário do dia
 schedule.every().day.at("00:00").do(tarefa)
 
 while True:
