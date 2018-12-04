@@ -10,14 +10,15 @@ def envia_relatorio_por_email():
         user = "usuario",
         passwd = "senha",
         db = "Banco"
-        )
+    )
 
     cur = db.cursor()
 
     query = cur.execute(
         """SELECT * FROM COMPRAS
         WHERE data >= curdate()
-        """)
+        """
+    )
 
     linhas = cur.fetchall()
 
